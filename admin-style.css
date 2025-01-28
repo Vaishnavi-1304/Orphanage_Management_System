@@ -1,0 +1,171 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Admin Container */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #292b2c;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a,
+#logout-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 0;
+    display: block;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+#logout-btn:hover {
+    background-color: #45a049;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.admin-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+.admin-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+.admin-form button {
+    background-color: #e43a47;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-form button:hover {
+    background-color: #d13840;
+}
+
+/* Data List */
+.data-list {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.data-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.data-list li span {
+    font-weight: bold;
+    color: #555;
+}
+
+.data-list li button {
+    background-color: #e43a47;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.data-list li button:hover {
+    background-color: #d13840;
+}
+
+/* Section styles for Adoptions and Donations */
+#manageAdoptions, #manageDonations {
+    margin-top: 20px;
+}
+
+.admin-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}

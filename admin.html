@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Orphanage Management</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar for Navigation -->
+        <aside class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#childrenSection">Manage Children</a></li>
+                <li><a href="#adoptionSection">Manage Adoptions</a></li>
+                <li><a href="#donationsSection">Manage Donations</a></li>
+                <li><a href="#mealsSection">Manage Meals & Necessities</a></li>
+                <li><button id="logout-btn">Logout</button></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Admin</h1>
+                <p>Manage all aspects of the orphanage system from one place</p>
+            </header>
+
+            <!-- Manage Children Section -->
+            <section id="childrenSection" class="admin-section">
+                <h2>Manage Children</h2>
+                <form id="childForm" class="admin-form" method="POST">
+                    <input type="text" id="childName" placeholder="Child Name" required>
+                    <input type="number" id="childAge" placeholder="Child Age" required>
+                    <select id="childGender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <button type="submit">Add Child</button>
+                </form>
+                <ul id="childrenList" class="data-list">
+                    <!-- List of children will be dynamically added here -->
+                </ul>
+            </section>
+
+            <!-- Manage Adoptions Section -->
+            <section id="adoptionSection" class="admin-section">
+                <h2>Manage Adoptions</h2>
+                <form id="adoptionForm" class="admin-form">
+                    <input type="text" id="adopterName" placeholder="Adopter's Name" required />
+                    <input type="text" id="adoptionChildName" placeholder="Child's Name" required />
+                    <input type="date" id="adoptionDate" placeholder="Adoption Date" required />
+                    <button type="submit">Add Adoption</button>
+                </form>
+                <ul id="adoptionsList" class="data-list">
+                    <!-- List of adopted children will be dynamically added here -->
+                </ul>
+            </section>
+
+            <!-- Other Sections (Donations, Meals, etc.) -->
+            <section id="donationsSection" class="admin-section">
+                <h2>Manage Donations</h2>
+                <form id="donationForm" class="admin-form">
+                    <input type="text" id="donorName" placeholder="Donor's Name" required />
+                    <input type="number" id="donationAmount" placeholder="Donation Amount" required />
+                    <input type="date" id="donationDate" required />
+                    <button type="submit">Add Donation</button>
+                </form>
+                <ul id="donationsList" class="data-list"></ul>
+            </section>
+
+            <section id="mealsSection" class="admin-section">
+                <h2>Manage Meals & Necessities</h2>
+                <form id="mealsForm" class="admin-form">
+                    <input type="text" id="mealDetails" placeholder="Meal Details" required>
+                    <input type="date" id="mealDate" required>
+                    <button type="submit">Add Meal</button>
+                </form>
+                <ul id="mealsList" class="data-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
